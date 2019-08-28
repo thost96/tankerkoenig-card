@@ -37,7 +37,7 @@ class TankerkoenigCard extends HTMLElement {
 
                         content += `
                             <tr>
-                                <td class="logo"><img height="40" width="40" src="/local/gasstation_logos/${station.brand.toLowerCase()}.png"></td>
+                                <td class="logo"><img height="40" width="40" src="/local/${station.brand.toLowerCase()}.png"></td>
                                 <td class="street">${station.name}</td>
                         `;
 
