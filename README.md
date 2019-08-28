@@ -43,7 +43,7 @@ cards:
 *only required if it should be shown
 
 ## Icons
-The icons must be in `*.png` format and can be uploaded using the lovelace adapter custom cards tab. A reload is needed after the upload. 
+The icons must be in `*.png` format and the filename must be all lowercase. The Icons can be uploaded using the lovelace adapter custom cards tab. A reload is needed after the upload. 
 
 
 
