@@ -1,34 +1,27 @@
-﻿# Tankerkoenig Lovelace Card
+﻿# Tankerkoenig Lovelace Card for ioBroker
 
-[![Version](https://img.shields.io/badge/version-0.1.0-green.svg?style=for-the-badge)](#) [![mantained](https://img.shields.io/maintenance/yes/2019.svg?style=for-the-badge)](#)
-
-[![maintainer](https://img.shields.io/badge/maintainer-Goran%20Zunic%20%40panbachi-blue.svg?style=for-the-badge)](https://www.panbachi.de)
 
 ## Installation
-1. Install this component by copying the `tankerkoenig-card.js` to your `/www/` folder.
-2. Add this to your Lovelace-Configuration using the config options below example.
-3. Put the icons as `*.png` for the brands in the `/www/gasstation_logos/` folder.
+1. Install this component by copying the `tankerkoenig-card.js` to your Lovelace adapter Custom Cards tab.
+2. Reload the Lovelace adapter.
+3. Also upload the icons as `*.png` for the brands using the Custom Cards upload tab.
 
 ```yaml
-resources:
-  - url: /local/tankerkoenig-card.js?v=0.0.1
-    type: js
-views:
-  - cards:
-      - type: 'custom:tankerkoenig-card'
-        name: Benzinpreise
-        show:
-          - e5
-          - e10
-        stations:
-          - name: Kölner Str.
-            brand: ARAL
-            e5: sensor.aral_kolner_str_e5
-            e10: sensor.aral_kolner_str_e10
-          - name: Untergath
-            brand: ARAL
-            e5: sensor.aral_untergath_e5
-            e10: sensor.aral_untergath_e10
+cards:
+   - type: 'custom:tankerkoenig-card'
+     name: Benzinpreise
+     show:
+       - e5
+       - e10
+     stations:
+       - name: Kölner Str.
+         brand: ARAL
+         e5: sensor.aral_kolner_str_e5
+         e10: sensor.aral_kolner_str_e10
+       - name: Untergath
+         brand: ARAL
+         e5: sensor.aral_untergath_e5
+         e10: sensor.aral_untergath_e10
 ```
 
 ### Options
@@ -49,17 +42,8 @@ views:
 
 *only required if it should be shown
 
-## Additional
-To use the icons you have to use uppercase names, which has to be the same as in the `brand` settings. The icons must be in `*.png` format.
+## Icons
+The icons must be in `*.png` format and can be uploaded using the lovelace adapter custom cards tab. A reload is needed after the upload. 
 
-### Example
-For the brand ARAL there has to be an icon with the following path:
 
-`/www/gasstation_logos/ARAL.png`
 
-# Support me / Follow me
-[![Web](https://img.shields.io/badge/www-panbachi.de-blue.svg?style=flat-square&colorB=3d72a8&colorA=333333)](https://www.panbachi.de)
-[![Facebook](https://img.shields.io/badge/-%40panbachi.de-blue.svg?style=flat-square&logo=facebook&colorB=3B5998&colorA=eee)](https://www.facebook.com/panbachi.de/)
-[![Twitter](https://img.shields.io/badge/-%40panbachi-blue.svg?style=flat-square&logo=twitter&colorB=1DA1F2&colorA=eee)](https://twitter.com/panbachi)
-[![Instagram](https://img.shields.io/badge/-%40panbachi.de-blue.svg?style=flat-square&logo=instagram&colorB=E4405F&colorA=eee)](http://instagram.com/panbachi.de)
-[![YouTube](https://img.shields.io/badge/-%40panbachi-blue.svg?style=flat-square&logo=youtube&colorB=FF0000&colorA=eee)](https://www.youtube.com/channel/UCO7f2L7ZsDCpOtRfKnPqNow)
