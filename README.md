@@ -10,6 +10,7 @@
 cards:
    - type: 'custom:tankerkoenig-card'
      name: Benzinpreise
+     show_header: true
      show:
        - e5
        - e10
@@ -25,11 +26,12 @@ cards:
 ```
 
 ### Options
-| key        | values            | required | description
-|------------|-------------------|----------|---
-| `name`     | String            | yes      | Name of the card that should be shown in the frontend
-| `show`     | [e5, e10, diesel] | yes      | What should be shown
-| `stations` | List of stations  | yes      | List of stations
+| key          | values            | required | description
+|--------------|-------------------|----------|---
+| `name`       | String            | yes      | Name of the card that should be shown in the frontend
+| `show`       | [e5, e10, diesel] | yes      | What should be shown
+| `show_header`| true or false     | yes      | Show header name or remove it
+| `stations`   | List of stations  | yes      | List of stations
 
 #### Stations
 | key      | value  | required | description
@@ -44,6 +46,4 @@ cards:
 
 ## Icons
 The icons must be in `*.png` format and the filename must be all lowercase. The Icons can be uploaded using the lovelace adapter custom cards tab. A reload is needed after the upload. 
-
-
 
