@@ -2,7 +2,7 @@ class TankerkoenigCard extends HTMLElement {
         set hass(hass) {
                 if(!this.content) {
                         const card = document.createElement('ha-card');
-                        if(this.config.show_header == true) {
+                        if(this.config.show_header) {
                                 card.header = this.config.name || 'Tankerkönig';
                         } else {
                                 card.header = '';
